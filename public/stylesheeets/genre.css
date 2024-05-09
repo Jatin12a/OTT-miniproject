@@ -1,0 +1,81 @@
+.genres{
+    /* background-color: red; */
+    width: 100%;
+    
+}
+
+.recom{
+    /* background-color: red; */
+    width: 100%;
+    height:min-content(100%-100px);
+
+}
+.recommended-movies{
+    display: flex;
+    gap: 100px;
+    /* background-color: navy; */
+    min-height: fit-content;
+    flex-wrap: wrap;
+    margin-left: 150px;
+    margin-right: 150px;
+    
+}
+
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+    
+  }
+  
+  
+  
+  .movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .movie-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .movie-card h3, .movie-card p {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .movie-card .watch-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .movie-card .watch-btn:hover {
+    background-color: #db490a;
+  }

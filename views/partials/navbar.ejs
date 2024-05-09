@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="/home">WatchNET</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li><a class="nav-link" href="/favorite">Favorite</a></li>
+                <!-- Dropdown menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Genre
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/genre/:Action">Action</a></li>
+                        <li><a class="dropdown-item" href="/genre/:Crime">Crime</a></li>
+                        <li><a class="dropdown-item" href="/genre/:Drama">Drama</a></li>
+                        <li><a class="dropdown-item" href="/genre/:Romance">Romance</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            
+            <form class="d-flex me-3">
+                <a href="/logout" class="btn btn-danger" type="submit">Logout</a>
+            </form>
+        </div>
+    </div>
+</nav>

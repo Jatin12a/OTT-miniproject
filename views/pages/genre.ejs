@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="../../stylesheeets/genre.css">
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+ 
+    <div class="genres">
+           <div class="recom">
+            <h2><%= genre  %></h2>
+            <div class="recommended-movies">
+                <% movie.forEach(function(movie) { %>
+                    <div class="movie-card">
+                        <img src="<%= movie.poster %>" alt="Movie Image">
+                        <div class="overlay">
+                            <h3><%- movie.title %></h3>
+                            <p><%= movie.release_year %></p>
+                            <a href="/home/<%= movie._id %>" class="watch-btn">Watch</a>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+
+    
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>WatchNET</h5>
+                    <p>Enjoy The Movies Of Your Choice.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <!-- Social media links/icons -->
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: moivenet@gmail.com<br>Phone: +1234567890</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 Your Company Name. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+
+   
+    
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
