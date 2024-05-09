@@ -146,4 +146,10 @@ header::before {
   .movie-card .watch-btn:hover {
     background-color: #db490a;
   }
-  
+.watch-btn{
+    background-color: #db490a;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}

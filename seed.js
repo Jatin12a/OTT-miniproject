@@ -19,53 +19,53 @@ const dummyMovies =[
   },
   {
     title: "The Godfather",
-    poster: "https://example.com/posters/the_godfather.jpg",
+    poster: "https://imgs.search.brave.com/fNTDGwrMOnzsnZzoURJ4oC2WCSjbeC_lEor8XW7uFQg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hY2Fk/ZW15bXVzZXVtc3Rv/cmUub3JnL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L21vdmllcG9zdGVy/cmVkbzQxLmpwZz92/PTE2NjY5Mzc3MTM",
     release_year: 1972,
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
     director_name: "Francis Ford Coppola",
     main_lead_name: "Marlon Brando, Al Pacino, James Caan",
     genre: ["Crime", "Drama"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v2.mp4"]
   },
    {
     title: "The Dark Knight",
-    poster: "https://example.com/posters/the_dark_knight.jpg",
+    poster: "https://imgs.search.brave.com/mo8W8Sz9UXm17ZMgHpzePFtgz9XZcbyTQPVzDX4lsck/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pcnMu/d3d3Lndhcm5lcmJy/b3MuY29tL2tleWFy/dC1qcGVnL21vdmll/cy9tZWRpYS9icm93/c2VyL3RoZV9kYXJr/X2tuaWdodF9rZXlf/YXJ0LmpwZw",
     release_year: 2008,
     description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     director_name: "Christopher Nolan",
     main_lead_name: "Christian Bale, Heath Ledger, Aaron Eckhart",
     genre: ["Action", "Crime", "Drama"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v3.mp4"]
   },
   {
     title: "Pulp Fiction",
-    poster: "https://example.com/posters/pulp_fiction.jpg",
+    poster: "https://imgs.search.brave.com/vJF_WABlwzovjHp9Td67zprRStJhaD45TWxOYUqYqrM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxOTV2S1Q2NmVM/LmpwZw",
     release_year: 1994,
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
     director_name: "Quentin Tarantino",
     main_lead_name: "John Travolta, Uma Thurman, Samuel L. Jackson",
     genre: ["Crime", "Drama"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v4.mp4"]
   },
   {
     title: "Forrest Gump",
-    poster: "https://example.com/posters/forrest_gump.jpg",
+    poster: "https://imgs.search.brave.com/V8jR0ZjBZkks_BvKm7ZEXdbnUQnhSTwwqRyr9ZjLvcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2JlLzgz/L2UyL2JlODNlMjc5/YjMzMzg3YzJjYzJh/NmE5NDE4MzUyZjc2/LmpwZw",
     release_year: 1994,
     description: "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
     director_name: "Robert Zemeckis",
     main_lead_name: "Tom Hanks, Robin Wright, Gary Sinise",
     genre: ["Drama", "Romance"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v5.mp4"]
   },
   {
     title: "Inception",
-    poster: "https://example.com/posters/inception.jpg",
+    poster: "https://imgs.search.brave.com/rfLlz8adTYV7r_ULmGj3O5mcvaEOVcbeOBHnqjThX0M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pcnMu/d3d3Lndhcm5lcmJy/b3MuY29tL2tleWFy/dC1qcGVnL2luY2Vw/dGlvbl9rZXlhcnQu/anBn",
     release_year: 2010,
     description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     director_name: "Christopher Nolan",
     main_lead_name: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
     genre: ["Action", "Adventure", "Sci-Fi"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v6.mp4"]
   },
   {
     title: "The Matrix",
@@ -75,7 +75,7 @@ const dummyMovies =[
     director_name: "Lana Wachowski, Lilly Wachowski",
     main_lead_name: "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
     genre: ["Action", "Sci-Fi"],
-    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"]
+    video:["../../datavideo/v7.mp4","../../datavideo/v8.mp4"]
   },
   {
     title: "Interstellar",

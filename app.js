@@ -9,7 +9,7 @@ const Moviemodel = require('./models/movies')
 
 const flash = require('connect-flash')
 const session = require('express-session');
-// const ejsMate = require('ejs-mate');
+
 
 app.use(session({
   secret: 'your-secret-key',
@@ -29,6 +29,13 @@ app.use(flash());
 app.get('/', (req, res) => {
   res.render('./pages/index');
 });
+
+app.get('/profile', isLoggedin, async(req,res)=>{
+  const user = await userModel.findOne({email: req.user.email})
+  console.log(user);
+  res.render('./pages/profile',{user});
+})
+
 
 app.get('/login', (req, res) => {
   res.render('./pages/login', { message: req.flash('error') });
@@ -83,7 +90,7 @@ app.get('/movie/video/:id',async (req,res)=>{
 })
 
 app.get('/favorite',isLoggedin ,async (req, res) => {
-  const userId = req.user.userid; // Assuming user is logged in and user ID is available in the request
+  const userId = req.user.userid; 
   const user = await userModel.findById(userId).populate('likes');
   const likes = user.likes
     res.render('pages/fav',{likes});
@@ -92,24 +99,22 @@ app.get('/favorite',isLoggedin ,async (req, res) => {
 
 app.post('/like/:movieId',isLoggedin, async (req, res) => {
   
-      const userId = req.user.userid; // Assuming user is logged in and user ID is available in the request
+      const userId = req.user.userid;
       const movieId = req.params.movieId;
 
       await userModel.findByIdAndUpdate(userId, { $addToSet: { likes: movieId } });
-
-      res.redirect('back');
+          res.redirect('back');
   
 });
 
 app.post('/Unlike/:movieId', isLoggedin, async (req, res) => {
   try {
-      const userId = req.user.userid; // Assuming user is logged in and user ID is available in the request
+      const userId = req.user.userid;
       const movieId = req.params.movieId;
 
-      // Find the user by ID and update their likes array to remove the movieId
       await userModel.findByIdAndUpdate(userId, { $pull: { likes: movieId } });
 
-      // Redirect the user back to the previous page
+    
       res.redirect('back');
   } catch (error) {
       console.error('Error:', error);
@@ -121,15 +126,11 @@ app.get('/genre/:genre', async (req, res) => {
   let genre = req.params.genre;
   genre = genre.replace(':', '');
   
-  console.log(genre);
-
       const movies = await Moviemodel.find({genre:genre});
    
       console.log(movies);
       res.render('pages/genre', { movie: movies,genre:genre }); 
 
-     
-  
 });
 
 
