@@ -25,30 +25,52 @@
               </div>
           </div>
       </section>
-      <script src="../../javascript/videoplay.js"></script>
-  
-     
-      <section>
-          <div class="container">
-            <h1>More Episode</h1>
-              <div class="row">
-                  <% for (let i = 1; i < videodata.video.length; i++) { %>
-                      <div class="col-md-3">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Episode <%= i + 1 %></h5>
-                                  <p class="card-text">Description of the episode goes here.</p>
-                                  
-                                  <a href="#" class="btn btn-primary">Watch Now</a>
-                              </div>
-                          </div>
-                      </div>
-                  <% } %>
-              </div>
-          </div>
-      </section>
+      <script src="../../javascript/videoplay.js"></script>  
   <% } %>
   
+
+     <div class="like">
+        <small class="mt-2 inline-block"><%= videodata.like.length  %> likes</small>
+                <div class="btns gap-4 flex mt-1">
+                    <a  href="/mlike/<%= videodata._id  %>"> ❤️  %></a>
+                    <a  href="/mulike/<%= videodata._id  %>"> 💔  %></a>
+                </div>
+     </div>
+  
+     <div>
+        <div class="col-lg-6 col-12">
+            <h1>All Comment</h1>
+            <form action="/comment/<%=videodata._id%>/add" method="post">
+              <fieldset class="starability-basic">
+                <input type="radio" id="first-rate1" name="rating" value="1" />
+                <label for="first-rate1" title="Terrible">1 ⭐</label>
+                <input type="radio" id="first-rate2" name="rating" value="2" />
+                <label for="first-rate2" title="Not good">2 ⭐</label>
+                <input type="radio" id="first-rate3" name="rating" value="3" />
+                <label for="first-rate3" title="Average">3 ⭐</label>
+                <input type="radio" id="first-rate4" name="rating" value="4" />
+                <label for="first-rate4" title="Very good">4 ⭐</label>
+                <input type="radio" id="first-rate5" name="rating" value="5" />
+                <label for="first-rate5" title="Amazing">5 ⭐</label>
+              </fieldset>
+              <br>
+              <textarea rows="3" cols="30" name="comment" placeholder="Write your comment here"></textarea><br>
+              <button class="btn btn-primary">Submit</button>
+            </form>
+            <div class="comment">
+             <% for(let review of videodata.comments){ %>
+                <div class="card mt-3" style="width: 20vw;"> 
+                  <div class="card-header">
+                    <h5><%= user.username  %></h5>
+                  </div>
+                  <div class="card-body">
+                    <p><%=review.comment%></p>
+                    <p><%=review.rating%>⭐</p>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+        </div>
 
 
 

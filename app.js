@@ -6,9 +6,10 @@ const bcrypt = require('bcrypt')
 const jwt =require('jsonwebtoken')
 const path = require('path')
 const Moviemodel = require('./models/movies')
-
+const CommentModel = require('./models/comments')
 const flash = require('connect-flash')
 const session = require('express-session');
+const user = require('./models/user');
 
 
 app.use(session({
@@ -69,7 +70,7 @@ app.get('/home', isLoggedin, async (req, res) => {
    
 });
 
-app.get('/home/:id' ,async (req,res)=>{
+app.get('/home/:id',isLoggedin ,async (req,res)=>{
   let {id} = req.params
   let movie = await Moviemodel.findById(id)
   
@@ -80,12 +81,14 @@ app.get('/home/:id' ,async (req,res)=>{
   res.render('./pages/movie', { movie: movie, recommendedMovies: recommendedMovies });
 })
 
-app.get('/movie/video/:id',async (req,res)=>{
+app.get('/movie/video/:id',isLoggedin,async (req,res)=>{
   let {id} = req.params;
-  let videodata = await Moviemodel.findById(id)
+  let videodata = await Moviemodel.findById(id).populate('comments')
+  const user = await userModel.findOne({email: req.user.email})
   console.log(videodata);
     res.render('pages/video',{
-      videodata
+      videodata,
+      user
     })
 })
 
@@ -122,7 +125,7 @@ app.post('/Unlike/:movieId', isLoggedin, async (req, res) => {
   }
 });
 
-app.get('/genre/:genre', async (req, res) => {
+app.get('/genre/:genre',isLoggedin, async (req, res) => {
   let genre = req.params.genre;
   genre = genre.replace(':', '');
   
@@ -201,3 +204,46 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// comment like rating
+// api fetch filter ratingfilter 
+// already watched
+
+app.get('/mlike/:movieId',isLoggedin, async (req, res) => {
+  
+  const userId = req.user.userid;
+  const movieId = req.params.movieId;
+
+  await Moviemodel.findByIdAndUpdate(movieId, { $addToSet: { like: userId } });
+      res.redirect('back');
+
+});
+
+app.get('/mulike/:movieId', isLoggedin, async (req, res) => {
+try {
+  const userId = req.user.userid;
+  const movieId = req.params.movieId;
+
+  await Moviemodel.findByIdAndUpdate(movieId, { $pull: { like: userId } });
+
+
+  res.redirect('back');
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).send('Internal Server Error');
+}
+});
+
+app.post('/comment/:id/add', async (req,res)=>{
+  const {id} = req.params;
+  const text = await Moviemodel.findById(id);
+  const{rating,comment} = req.body;
+
+  let x = await CommentModel.create({rating,comment})
+ text.comments.push(x)
+ text.save()
+  res.redirect('back');
+
+})
+
+//iframe
