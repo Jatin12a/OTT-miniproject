@@ -31,6 +31,7 @@ const MovieSchema = new mongoose.Schema({
     }],
     video:{
         type:String
+
     },
     like:[{
         type: mongoose.Schema.Types.ObjectId, ref:"user"}],
