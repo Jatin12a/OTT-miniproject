@@ -14,8 +14,13 @@ const dummyMovies = [
     director_name: "Frank Darabont",
     main_lead_name: "Tim Robbins, Morgan Freeman",
     genre: ["Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=6hB3S9bIaco",
     like: []
+=======
+    video:["../../datavideo/v1.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "The Godfather",
@@ -25,8 +30,13 @@ const dummyMovies = [
     director_name: "Francis Ford Coppola",
     main_lead_name: "Marlon Brando, Al Pacino, James Caan",
     genre: ["Crime", "Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=sY1S34973zA",
     like: []
+=======
+    video:["../../datavideo/v2.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "The Dark Knight",
@@ -36,8 +46,13 @@ const dummyMovies = [
     director_name: "Christopher Nolan",
     main_lead_name: "Christian Bale, Heath Ledger, Aaron Eckhart",
     genre: ["Action", "Crime", "Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
     like: []
+=======
+    video:["../../datavideo/v3.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Pulp Fiction",
@@ -47,8 +62,13 @@ const dummyMovies = [
     director_name: "Quentin Tarantino",
     main_lead_name: "John Travolta, Uma Thurman, Samuel L. Jackson",
     genre: ["Crime", "Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=s7EdQ4FqbhY",
     like: []
+=======
+    video:["../../datavideo/v4.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Forrest Gump",
@@ -58,8 +78,13 @@ const dummyMovies = [
     director_name: "Robert Zemeckis",
     main_lead_name: "Tom Hanks, Robin Wright, Gary Sinise",
     genre: ["Drama", "Romance"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=bLvqoHBptjg",
     like: []
+=======
+    video:["../../datavideo/v5.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Inception",
@@ -69,8 +94,13 @@ const dummyMovies = [
     director_name: "Christopher Nolan",
     main_lead_name: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
     genre: ["Action", "Adventure", "Sci-Fi"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=YoHD9XEInc0",
     like: []
+=======
+    video:["../../datavideo/v6.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "The Matrix",
@@ -80,8 +110,13 @@ const dummyMovies = [
     director_name: "Lana Wachowski, Lilly Wachowski",
     main_lead_name: "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
     genre: ["Action", "Sci-Fi"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=vKQi3bBA1y8",
     like: []
+=======
+    video:["../../datavideo/v7.mp4","../../datavideo/v8.mp4"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Interstellar",
@@ -91,8 +126,13 @@ const dummyMovies = [
     director_name: "Christopher Nolan",
     main_lead_name: "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
     genre: ["Adventure", "Drama", "Sci-Fi"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=zSWdZVtXT7E",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Fight Club",
@@ -102,8 +142,13 @@ const dummyMovies = [
     director_name: "David Fincher",
     main_lead_name: "Brad Pitt, Edward Norton, Helena Bonham Carter",
     genre: ["Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=SUXWAEX2jlg",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -113,8 +158,13 @@ const dummyMovies = [
     director_name: "Peter Jackson",
     main_lead_name: "Elijah Wood, Ian McKellen, Orlando Bloom",
     genre: ["Action", "Adventure", "Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=V75dMMIW2B4",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "The Silence of the Lambs",
@@ -124,8 +174,13 @@ const dummyMovies = [
     director_name: "Jonathan Demme",
     main_lead_name: "Jodie Foster, Anthony Hopkins, Lawrence A. Bonney",
     genre: ["Crime", "Drama", "Thriller"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=W6Mm8Sbe__o",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Schindler's List",
@@ -135,8 +190,13 @@ const dummyMovies = [
     director_name: "Steven Spielberg",
     main_lead_name: "Liam Neeson, Ben Kingsley, Ralph Fiennes",
     genre: ["Biography", "Drama", "History"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=gG22XNhtnoY",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   },
   {
     title: "Gladiator",
@@ -146,6 +206,7 @@ const dummyMovies = [
     director_name: "Ridley Scott",
     main_lead_name: "Russell Crowe, Joaquin Phoenix, Connie Nielsen",
     genre: ["Action", "Adventure", "Drama"],
+<<<<<<< HEAD
     video: "https://www.youtube.com/watch?v=owK1bxDqXk0",
     like: []
   },
@@ -159,6 +220,32 @@ const dummyMovies = [
     genre: ["Crime", "Drama", "Mystery"],
     video: "https://www.youtube.com/watch?v=oiXdPolca5o",
     like: []
+=======
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+  },
+  {
+    title: "Titanic",
+    poster: "https://example.com/posters/titanic.jpg",
+    release_year: 1997,
+    description: "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+    director_name: "James Cameron",
+    main_lead_name: "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+    genre: ["Drama", "Romance"],
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+  },
+  {
+    title: "The Departed",
+    poster: "https://example.com/posters/the_departed.jpg",
+    release_year: 2006,
+    description: "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+    director_name: "Martin Scorsese",
+    main_lead_name: "Leonardo DiCaprio, Matt Damon, Jack Nicholson",
+    genre: ["Crime", "Drama", "Thriller"],
+    video:["https://youtu.be/4OGTQRcOFVA?si=yDc2jrActTqku1Yf"],
+    like:[]
+>>>>>>> c4d3249bf13c731e83dba3c30c35a3e00f91135d
   }
 ];
 

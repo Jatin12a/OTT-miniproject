@@ -70,10 +70,10 @@ app.get('/home', isLoggedin, async (req, res) => {
    
 });
 
-app.get('/home/:id', isLoggedin, async (req, res) => {
-  let { id } = req.params;
-  let movie = await Moviemodel.findById(id);
-
+app.get('/home/:id' ,async (req,res)=>{
+  let {id} = req.params
+  let movie = await Moviemodel.findById(id)
+  
   const genre = movie.genre;
   console.log(genre);
   const recommendedMovies = await Moviemodel.find({ genre: { $in: genre } }).limit(4);
