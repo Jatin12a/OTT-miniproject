@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(45, 44, 44);
+    color: white;
+}
+
+.allmovie {
+    background-color: #333; /* Dark gray background for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: #444; /* Slightly lighter background */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.movie-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.movie-card h3 {
+    margin: 10px 0;
+}
+
+.movie-card a.watch-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Blue button for "Watch" */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.movie-card a.watch-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.movie-card button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-card button:hover {
+    background-color: #c00; /* Darker red on hover */
+}

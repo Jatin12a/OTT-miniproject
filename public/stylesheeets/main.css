@@ -99,7 +99,10 @@ body,html{
   z-index: 999999;
 }
 
-
+.like-btn{
+  background-color: transparent;
+  border: none;
+}
 
 .movie-card img {
   width: 100%;
