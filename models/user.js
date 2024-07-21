@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/OTT");
+mongoose.connect(process.env.MONGODB_URL);
 // mongoose.connect("mongodb+srv://gmusti890:Jatinjoker1@@projects.yzesvk2.mongodb.net/?retryWrites=true&w=majority&appName=Projects");
 
 const UserSchema = mongoose.Schema({
