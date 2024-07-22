@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Movie = require('./models/movies');
 
-mongoose.connect('mongodb://127.0.0.1:27017/OTT', {
+mongoose.connect('mongodb+srv://OTTJAatin:Jatinjoker1@ott.buytmni.mongodb.net/ott', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
